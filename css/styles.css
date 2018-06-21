@@ -273,3 +273,31 @@ nav h1 a {
 #restaurant-hours td {
   color: #666;
 }
+/* ================== Media Queries for Responsive Design ============= */
+/* Small Mobile Devices */
+@media screen and (max-width: 480px) {
+   .p_headline { background-color: red; }
+   body { width: 360px;
+          margin: auto; }
+}
+
+/* Larger Mobile Devices */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+   .p_headline { background-color: green; }
+   body { width: 481px;
+          margin:  auto; }
+}
+
+/* Tablets */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+   .p_headline { background-color: blue; }
+   body { width: 769px;
+           margin:  auto; }
+}
+
+/* Desktop and Laptop Screens */
+@media screen and (min-width: 1024px) {
+   .p_headline { background-color: blue; }
+   body { width: 1024px;
+           margin:  auto; }
+}
