@@ -131,26 +131,28 @@ nav h1 a {
 
 /* ====================== Restaurant Listing ====================== */
 #restaurants-list {
+  display: flex;
+  flex-wrap: wrap;
   background-color: #f3f3f3;
   list-style: outside none none;
-  margin: 0;
-  padding: 30px 15px 60px;
-  text-align: center;
+  margin-top: 10px auto 10px auto;
+  padding: 0 0 0 0;
+  width:  100%;
 }
 #restaurants-list li {
   background-color: #fff;
   border: 2px solid #ccc;
   font-family: Arial,sans-serif;
-  margin: 15px;
+  margin: 2px;
   min-height: 380px;
-  padding: 0 30px 25px;
+  padding: 20px 30px 25px;
   text-align: left;
   width: 270px;
 }
 #restaurants-list .restaurant-img {
   background-color: #ccc;
   display: block;
-  margin: 0;
+  margin: 10px 0 0 0;
   max-width: 100%;
   min-height: 248px;
   min-width: 100%;
@@ -298,6 +300,6 @@ nav h1 a {
 /* Desktop and Laptop Screens */
 @media screen and (min-width: 1024px) {
    .p_headline { background-color: blue; }
-   body { width: 1024px;
+   body { width: 1080px;
            margin:  auto; }
 }
