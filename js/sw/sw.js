@@ -53,11 +53,16 @@ self.addEventListener('activate', function(event) {
 
 // Hijack fetch requests.
 // Respond with a cached entry if available, otherwise fetch from network
+// and add entry to the cache.
 self.addEventListener('fetch', function(event) {
   event.respondWith(
-    caches.match(event.request).then(function(response) {
+    cache.match(event.request).then(function(response) {
       if (response) return response;
-      return fetch(event.request);
-    })
+      // Otherwise fetch from network and cache it.
+      return fetch(event.request).then(function(response) {
+        cache.put(event.request, response.clone());
+        return response;
+      });
+    }
   );
 });
