@@ -152,9 +152,10 @@ nav h1 a {
   font-family: Arial,sans-serif;
   margin: 15px;
   min-height: 380px;
-  padding: 0 0 25px;
-  text-align: left;
+  padding: 0px;
+  text-align: center;
   width: 270px;
+  border-top-left-radius: 20px;
 }
 #restaurants-list .restaurant-img {
   background-color: #ccc;
@@ -190,6 +191,7 @@ nav h1 a {
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
+  border-radius: 10px;
 }
 /*#restaurants-list .restaurant-desc {
   display:  flex;
