@@ -13,13 +13,13 @@
 
 <body class="inside">
   <!-- Beginning header -->
-  <header>
+  <header aria-label="Header">
     <!-- Beginning nav -->
-    <nav>
-      <h1><a href="/">Restaurant Reviews</a></h1>
+    <nav aria-label="Navigation">
+      <h1 aria-labels="Restaurant Reviews"><a href="/">Restaurant Reviews</a></h1>
     </nav>
     <!-- Beginning breadcrumb -->
-    <ul id="breadcrumb" >
+    <ul id="breadcrumb" aria-label="Breadcrumb Path">
       <li><a href="/">Home</a></li>
     </ul>
     <!-- End breadcrumb -->
@@ -28,24 +28,24 @@
   <!-- End header -->
 
   <!-- Beginning main -->
-  <main id="maincontent">
+  <main id="maincontent" aria-content="Main Page Content">
     <!-- Beginning map -->
     <section id="map-container">
-      <div id="map"></div>
+      <div id="map" aria-label="Map" role="application"></div>
     </section>
     <!-- End map -->
     <!-- Beginning restaurant -->
     <section id="restaurant-container">
-      <h1 id="restaurant-name"></h1>
-      <img id="restaurant-img">
-      <p id="restaurant-cuisine"></p>
-      <p id="restaurant-address"></p>
-      <table id="restaurant-hours"></table>
+      <h1 id="restaurant-name" aria-label="Restaurant Name"></h1>
+      <img id="restaurant-img" aria-label="Restaurant Image">
+      <p id="restaurant-cuisine" aria-label="Restaurant Cuisine"></p>
+      <p id="restaurant-address" aria-label="Restaurant Address"></p>
+      <table id="restaurant-hours" aira-label="Restaurant Hours"></table>
     </section>
     <!-- end restaurant -->
     <!-- Beginning reviews -->
     <section id="reviews-container">
-      <ul id="reviews-list"></ul>
+      <ul id="reviews-list" aria-label="Reviews List"></ul>
     </section>
     <!-- End reviews -->
   </main>
