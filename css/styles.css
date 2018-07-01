@@ -9,7 +9,6 @@ body,td,th,p{
 }
 body {
 	background-color: #fdfdfd;
-	margin: 0;
 	position:relative;
 }
 ul, li {
@@ -77,7 +76,7 @@ nav h1 a {
     font-size: 17px;
     margin: 0;
     max-width: 100%;
-    padding:  10px 0 16px 40px;
+    padding:  10px 0 16px 5%;
 }
 
 /* Display list items side by side */
@@ -105,7 +104,7 @@ nav h1 a {
 }
 /* ====================== Map ====================== */
 #map {
-  height: 400px;
+  height: 350px;
   width: 100%;
   background-color: #ccc;
 }
@@ -218,16 +217,14 @@ nav h1 a {
 }
 .inside #map-container {
   background: #eee none repeat scroll 0 0;
-  height: 30%;
-  position: relative;
+  position: static;
   right: 0;
-  top: 80px;
   width: 100%;
 }
 .inside #map {
   background-color: #ccc;
   width: 90%;
-  margin: 0 5% 0 5%;
+  margin: 140px 5% 0 5%;
 }
 .inside #footer {
   bottom: 0;
@@ -240,13 +237,12 @@ nav h1 a {
   font-size: 20pt;
   font-weight: 200;
   letter-spacing: 0;
-  margin: 30px 0 30px;
+  margin: 10px 0 30px 0;
   text-transform: uppercase;
   line-height: 1.1;
 }
 #restaurant-img {
 	width: 90%;
-  border-top-left-radius: 25px;
 }
 #restaurant-address {
   font-size: 12pt;
@@ -268,7 +264,7 @@ nav h1 a {
 #restaurant-container, #reviews-container {
   border-bottom: 1px solid #d9d9d9;
   border-top: 1px solid #fff;
-  padding: 5% 0 0 5%;
+  padding: 20px 23px 60px 25px;
   width: 100%; /* colin */
 }
 #reviews-container {
@@ -336,11 +332,11 @@ nav h1 a {
   #maincontent {
     display: flex;
     flex-direction: column;
-  }
-
+}
 body {
   max-width: 1024px;
-  margin: 0 auto 0 auto;
+  margin-left:  auto;
+  margin-right:  auto;
 }
 
 .inside #map-container {
@@ -355,7 +351,7 @@ body {
   background-color: #ccc;
   height: 100%;
   width: 100%;
-  margin:  0 0 0 0;
+  margin:  25px 0 0 0;
 }
 
   #map {
@@ -366,8 +362,8 @@ body {
     padding: 10px 40px 16px 25px;
   }
 
-  .inside #breadcrumb {
-    width: 50%;
+  #restaurant-name {
+    margin: 120px 0 10px 0;
   }
 
   #restaurant-content, #reviews {
@@ -375,12 +371,7 @@ body {
   }
 
   #restaurant-container, #reviews-container {
-     padding: 140px 25px 30px;
      width:  50%;
-  }
-
-  #reviews-container {
-    padding: 30px 25px 25px;
   }
 
   #footer {
@@ -390,5 +381,14 @@ body {
   .inside #footer {
     width: 50%;
   }
-
 }
+
+/* for narrow screens */
+@media screen and (max-width: 480px) {
+  nav h1 a {
+    letter-spacing: 1px;
+  }
+
+  ul li {
+    font-size:  20px;
+  }
