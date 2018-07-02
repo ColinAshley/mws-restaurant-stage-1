@@ -8,7 +8,6 @@ A responsive and accessible Web App including service worker based Fetch and Cac
 * [Features](#features)
 * [Installation](#installation)
 * [Usage](#usage)
-* [Expected Test Results](#expected-results)
 
 ## Features
 
