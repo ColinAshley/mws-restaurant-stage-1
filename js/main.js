@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
 // Register the 'fetch hijacking' and 'caching' Service Worker - colin
 if (navigator.serviceWorker) {
-  navigator.serviceWorker.register('/js/sw/sw.js').then(function() {
+  navigator.serviceWorker.register('/sw.js').then(function() {
     console.log('Service Worker Registered :)');
   }).catch(function() {
     console.log('Service Worker Registration FAILED!');

@@ -5,6 +5,7 @@ const urlsToCache = [
   '/',
   '/index.html',
   '/restaurant.html',
+  '/sw.js',
   '/js/dbhelper.js',
   '/js/restaurant_info.js',
   '/js/main.js',
@@ -56,13 +57,18 @@ self.addEventListener('activate', function(event) {
 // and add entry to the cache.
 self.addEventListener('fetch', function(event) {
   event.respondWith(
-    cache.match(event.request).then(function(response) {
+    caches.match(event.request).then(function(response) {
       if (response) return response;
       // Otherwise fetch from network and cache it.
       return fetch(event.request).then(function(response) {
-        cache.put(event.request, response.clone());
+        // then clone the response and open the static cache
+        var responseClone = response.clone();
+        caches.open(cacheNameStatic).then(function (cache) {
+          // add cloned response to the cache
+          cache.put(event.request, responseClone);
+        });
         return response;
       });
     }
-  );
+  ));
 });
